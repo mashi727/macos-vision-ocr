@@ -1,0 +1,13 @@
+# Compiled binaries / build artifacts
+ocr_pdf
+*.o
+*.dSYM/
+.build/
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
