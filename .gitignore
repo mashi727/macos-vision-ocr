@@ -11,3 +11,6 @@ ocr_pdf
 .vscode/
 .idea/
 *.swp
+
+# Work logs (local handoff notes, not published)
+worklog/
