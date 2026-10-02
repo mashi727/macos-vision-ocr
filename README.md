@@ -8,7 +8,7 @@ languages (Japanese and English by default).
 
 ## How it works
 
-What problem this solves and how, as a PAD (Problem Analysis Diagram). See the sections below for details.
+What challenge this addresses and how, as a PAD (Problem Analysis Diagram). See the sections below for details.
 
 <img src="docs/pad/concept.png" alt="Concept PAD. To get the text out of a PDF offline, the tool renders each page and recognizes it with on-device Vision, then prints the text page by page to stdout" width="100%">
 

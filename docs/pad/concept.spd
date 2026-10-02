@@ -1,5 +1,5 @@
 Get the text out of a PDF offline
-	:comment Problem: OCR without network or API key
+	:comment Challenge: OCR with no network or key
 	:comment Approach: on-device Vision, one file
 	Start the tool on a PDF
 		:if Compiled for faster startup?
