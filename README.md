@@ -6,6 +6,14 @@ framework. Each PDF page is rendered at ~300 DPI and recognized with
 `VNRecognizeTextRequest`, so it works fully offline and supports multiple
 languages (Japanese and English by default).
 
+## How it works
+
+What problem this solves and how, as a PAD (Problem Analysis Diagram). See the sections below for details.
+
+<img src="docs/pad/concept.png" alt="Concept PAD. To get the text out of a PDF offline, the tool renders each page and recognizes it with on-device Vision, then prints the text page by page to stdout" width="100%">
+
+<sub>Diagram source: [`docs/pad/concept.spd`](docs/pad/concept.spd). Checked and rendered with [padkit](https://github.com/mashi727/padkit).</sub>
+
 ## Features
 
 - **Offline** — uses the on-device Vision OCR engine; no network or API key required.
@@ -68,7 +76,7 @@ swiftc -O ocr_pdf.swift -o ocr_pdf
 > The compiled `ocr_pdf` binary is intentionally excluded from version control
 > (see `.gitignore`); build it locally as shown above.
 
-## How it works
+## How it works in detail
 
 1. The PDF is loaded with **PDFKit** (`PDFDocument`).
 2. Each page is rendered into a `CGImage` at 2× scale (≈300 DPI) on a white background.

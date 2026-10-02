@@ -1,0 +1,18 @@
+Get the text out of a PDF offline
+	:comment Problem: OCR without network or API key
+	:comment Approach: on-device Vision, one file
+	Start the tool on a PDF
+		:if Compiled for faster startup?
+			$ swiftc -O ocr_pdf.swift -o ocr_pdf@$ ./ocr_pdf doc.pdf ja,en
+		:else
+			$ swift ocr_pdf.swift doc.pdf ja,en
+	Choose recognition languages
+		:if Languages given?
+			Use the given codes
+		:else
+			Use ja,en
+	:while Pages left?
+		Render the page at 2x scale@on a white background
+		Recognize the text with Vision@(.accurate, language correction)
+		Print the top candidate per line@under "=== Page N ==="
+	:terminal Plain text on stdout
